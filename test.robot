@@ -5,17 +5,6 @@ Library  SeleniumLibrary
 ${URL}  https://app.dobronika.cz/
 
 *** Test Cases ***
-Prihlaseni spravnym heslem
-    Open Browser    ${URL}     chrome
-    Wait Until Element Is Visible    //*[@id="id_username"]
-    Input text    //*[@id="id_username"]    samko_admin
-    Wait Until Element Is Visible    //*[@id="id_password"]
-    Input text    //*[@id="id_password"]    Admin1234.
-    click element    //*[@type="submit"]
-    sleep  3s
-    Close Browser    
-
-
 Prihlaseni spatnym heslem
     Open Browser    ${URL}    chrome
     Wait Until Element Is Visible    //*[@id="id_username"]
