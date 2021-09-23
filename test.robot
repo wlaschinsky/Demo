@@ -10,7 +10,7 @@ Prihlaseni spatnym heslem
     Wait Until Element Is Visible    //*[@id="id_username"]
     Input text    //*[@id="id_username"]    samko_admin
     Wait Until Element Is Visible    //*[@id="id_password"]
-    Input text    //*[@id="id_password"]    Adin1234.
+    Input text    //*[@id="id_password"]    aidiawdef2d4.
     click element    //*[@type="submit"]
     Wait Until Element Is Visible    //*[@id="id_password"]
     should be empty  //*[@id="id_password"]
