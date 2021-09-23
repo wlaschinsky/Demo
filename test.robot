@@ -1,9 +1,12 @@
 *** Settings ***
 Library  SeleniumLibrary
 
+*** Variables ***
+${URL}  https://app.dobronika.cz/
+
 *** Test Cases ***
 Prihlaseni spravnym heslem
-    Open Browser    https://app.dobronika.cz/    chrome
+    Open Browser    ${URL}     chrome
     Wait Until Element Is Visible    //*[@id="id_username"]
     Input text    //*[@id="id_username"]    samko_admin
     Wait Until Element Is Visible    //*[@id="id_password"]
@@ -14,7 +17,7 @@ Prihlaseni spravnym heslem
 
 
 Prihlaseni spatnym heslem
-    Open Browser    https://app.dobronika.cz/    chrome
+    Open Browser    ${URL}    chrome
     Wait Until Element Is Visible    //*[@id="id_username"]
     Input text    //*[@id="id_username"]    samko_admin
     Wait Until Element Is Visible    //*[@id="id_password"]
@@ -24,4 +27,4 @@ Prihlaseni spatnym heslem
     should be empty  //*[@id="id_password"]
     Close Browser
     #jak overit, ze se po zadani nespravneho hesla vymaze obsah z jednoho nebo druheho pole
-    #open UERL pokud se prihlasim a chci navigovat dal bez klikani
+ 
